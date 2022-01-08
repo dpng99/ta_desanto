@@ -6,14 +6,16 @@ import Head from './Component/Head'
 const AddData = () => {
     const [latitude, setLatitude] = useState('')
     const [longitude, setLongitude] = useState('')
-    const [form, setForm] = useState({
+    const [getAlat, setGetAlat] = useState(null)
+    const [setChild, getSetChild] = useState(null)
+    const [formData, setFormData] = useState({
         latitude: '',
         longitude: ''
     })
     useEffect(() => {
         const Data = CrudHandler.getData()
         Data.on('value', snapshot => {
-            
+
         })
        
     }, [])
@@ -29,6 +31,7 @@ const AddData = () => {
         <Container className='mt-5 justify-content-center align-items-center d-flex'>
         <Card className="p-3 h-50 w-50">
          <Form onSubmit={handleSubmit}>
+             <h1>iseng update</h1>
              <Form.Group>
                  <Form.Label className='text-black font-monospace size-2'>Latitude</Form.Label>
                  <Form.Control type="text"   />
