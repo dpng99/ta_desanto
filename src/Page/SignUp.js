@@ -3,7 +3,7 @@ import { useAuth } from '../Handler/LoginHandler'
 import { useHistory } from 'react-router-dom';
 import {Alert, Container, Form, Image, Button, Card } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import BG from '../Img/gambar3.jpg'
+import BG from '../Img/gambar4.jpg'
 import Brand from '../Img/brandMbl.png'
 const SignUp = () => {
     const emailRef = useRef()
