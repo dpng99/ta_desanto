@@ -31,7 +31,7 @@ const AddData = () => {
         <Container className='mt-5 justify-content-center align-items-center d-flex'>
         <Card className="p-3 h-50 w-50">
          <Form onSubmit={handleSubmit}>
-             <h1>iseng update</h1>
+             <h1>Data Lokasi Baru</h1>
              <Form.Group>
                  <Form.Label className='text-black font-monospace size-2'>Latitude</Form.Label>
                  <Form.Control type="text"   />

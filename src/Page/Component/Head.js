@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {Container, Navbar, NavDropdown, Nav} from 'react-bootstrap'
+import {Container, Navbar, NavDropdown, Nav, Offcanvas} from 'react-bootstrap'
 import { useAuth } from '../../Handler/LoginHandler'
 import Brand from '../../Img/brandMbl.png'
 import { useHistory } from 'react-router';
@@ -18,8 +18,8 @@ const Head = () => {
       }
   }
     return (
-<Navbar bg="primary" expand="lg">
-  <Container fluid>
+<Navbar bg="primary" expand={false}>
+  <Container fluid className='d-flex align-items-between'>
     <Navbar.Brand href="/">
             <img
                 alt=""
@@ -27,17 +27,24 @@ const Head = () => {
                 width="30"
                 height="30"
                 className="d-inline-block align-top"
-              />{' '}MBL</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
-        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-        <NavDropdown.Item href='/adddata' >Add New Location</NavDropdown.Item>
+              />{' '}Dashboard</Navbar.Brand>
+    <Navbar.Toggle aria-controls="offcanvasNavbar" className='bg-white' />
+    <Navbar.Offcanvas 
+    id='offcanvasNavbar'
+    aria-labelledby="offcanvasNavbarLabel"
+    placement='end'
+    >
+      <Offcanvas.Header closeButton>
+      <h1>MBL</h1>
+      </Offcanvas.Header>
+      <Offcanvas.Body>
+      <Nav >
+        <Nav.Link href='/adddata' >Add New Location</Nav.Link>
           <NavDropdown.Divider />
-          <NavDropdown.Item  onClick={handleLogout} >Logout</NavDropdown.Item>
-        </NavDropdown>
+        <Nav.Link  onClick={handleLogout} >Logout</Nav.Link>
       </Nav>
-    </Navbar.Collapse>
+      </Offcanvas.Body>
+    </Navbar.Offcanvas>
   </Container>
 </Navbar>
     )
