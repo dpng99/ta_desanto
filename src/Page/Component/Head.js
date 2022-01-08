@@ -35,7 +35,7 @@ const Head = () => {
     placement='end'
     >
       <Offcanvas.Header closeButton>
-      <h1>MBL</h1>
+      <h1>Menu</h1>
       </Offcanvas.Header>
       <Offcanvas.Body>
       <Nav >
