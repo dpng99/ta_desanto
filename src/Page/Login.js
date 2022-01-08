@@ -1,5 +1,5 @@
 import React,{useState, useRef} from 'react'
-import { Container, Button, Form, Card, Image} from 'react-bootstrap'
+import { Container, Button, Form, Card, Image, Alert} from 'react-bootstrap'
 import { useAuth } from '../Handler/LoginHandler'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useHistory } from 'react-router-dom';
@@ -33,6 +33,7 @@ const Login = () => {
             <Image className='img-fluid w-25 h-25 align-self-center' src={Brand}/>
                 <h1 className='text-center fs-2 text-white'>LOGIN</h1>
                 <Form onSubmit={handleSubmit} className="form-horizontal">
+                {error && <Alert variant="danger">{error}</Alert>}
                     <Form.Group>
                         <Form.Label className='fs-6 text-white'>Username</Form.Label>
                         <Form.Control type='text' ref={emailRef}/>

@@ -34,6 +34,7 @@ const SignUp = () => {
         <Image className='img-fluid w-25 h-25 align-self-center' src={Brand}/> 
             <h1 className='text-center fs-2 text-white'>Sign Up</h1>
             <Form onSubmit={handleSubmit} className="form-horizontal">
+            {error && <Alert variant="danger">{error}</Alert>}
                 <Form.Group>
                     <Form.Label className='fs-6 text-white'>Username</Form.Label>
                     <Form.Control type='text' ref={emailRef}/>
