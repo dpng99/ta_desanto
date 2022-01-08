@@ -26,7 +26,7 @@ const Login = () => {
         setLoading(false)
     } 
     return (
-        <Container fluid className='m-0 align-items-center p-5 h-100' style={{ backgroundImage: `url(${BG})` }}>
+        <Container fluid className='m-0 align-items-center p-5 h-100 w-100' style={{ backgroundImage: `url(${BG})` }}>
         <Container className='m-5 d-flex justify-content-center align-items-center p-5'>
             
             <Card fluid className=" p-5 h-75 w-50 bg-opacity-50 bg-black rounded-3" > 
