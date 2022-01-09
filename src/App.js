@@ -6,6 +6,7 @@ import SignUp from './Page/SignUp';
 import Dashboard from './Page/Dashboard';
 import PrivateRouter from './Handler/PrivateRouter';
 import AddData from './Page/AddData';
+import DataTable from './Page/DataTable';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 <Switch>
     <PrivateRouter exact path='/' component={Dashboard}/>
     <PrivateRouter path='/adddata' component={AddData}/>
+    <PrivateRouter path='/datatable' component={DataTable}/>
     <Route path="/login" component={Login}/>
     <Route path="/signup" component={SignUp}/>
     </Switch>
