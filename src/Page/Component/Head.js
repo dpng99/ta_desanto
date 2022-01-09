@@ -40,6 +40,7 @@ const Head = () => {
       <Offcanvas.Body>
       <Nav >
         <Nav.Link href='/adddata' >Add New Location</Nav.Link>
+        <Nav.Link href='/datatable' >Information</Nav.Link>
           <NavDropdown.Divider />
         <Nav.Link  onClick={handleLogout} >Logout</Nav.Link>
       </Nav>
