@@ -20,7 +20,7 @@ const MapsContainer = () => {
             mapContainerClassName='container-fluid position-absolute h-100 w-100' 
             zoom={13}>
                  <Marker
-                position={{ lat: -6.9587227, lng: 107.6224512 }}
+                position={{ lat: -6.8789356, lng: 107.6077721 }}
                 >
                 </Marker>
             </GoogleMap>
