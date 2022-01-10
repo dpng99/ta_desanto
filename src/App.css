@@ -1,9 +1,9 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+@import url('http://fonts.googleapis.com/css?family=Roboto');
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Luxurious Roman', cursive;
+  font-family: 'Roboto', cursive;
 }
