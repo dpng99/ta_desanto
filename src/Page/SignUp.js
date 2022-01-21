@@ -3,7 +3,7 @@ import { useAuth } from '../Handler/LoginHandler'
 import { useHistory } from 'react-router-dom';
 import {Alert, Container, Form, Image, Button, Card } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import BG from '../Img/gambar4.jpg'
+import BG from '../Img/bgBaru.jpg'
 import Brand from '../Img/brandMbl.png'
 const SignUp = () => {
     const emailRef = useRef()
@@ -28,6 +28,8 @@ const SignUp = () => {
         setLoading(false)
       }
     return (
+      <Container fluid className='p-0'>
+        <Image src={BG} className='img-fluid position-absolute'/>
       <Container fluid className='m-0 align-items-center p-5 h-100' style={{ backgroundImage: `url(${BG})` }}>
         <Container className='m-5 d-flex justify-content-center align-items-center p-5'>
         <Card  fluid className=" p-5 h-75 w-50 bg-opacity-50 bg-black rounded-3">
@@ -49,10 +51,14 @@ const SignUp = () => {
                 </Form.Group>
                 <Container className='d-flex justify-content-center align-items-center'>
                     <Button type='submit' className='rounded-3 mt-3 m-3'>SignUp</Button>
-                    <Button className='rounded-3 mt-3 m-3' href={'/login'}>Login</Button>
+                    
                     </Container>
             </Form>
+            <span className=' text-white justify-content-center align-items-center d-flex fs-6'>
+                         Sudah punya akun? Login <a href='/login'> disini</a>
+                         </span>
         </Card>
+    </Container>
     </Container>
     </Container>
         
