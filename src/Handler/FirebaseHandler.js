@@ -10,13 +10,11 @@ import 'firebase/compat/firestore'
 const app = firebase.initializeApp ({
   apiKey: "AIzaSyCkBHsZONAZSO0FPE5ReQeXvs9v7ghoTa0",
   authDomain: "monitoringbencanalongsor.firebaseapp.com",
+  databaseURL: "https://monitoringbencanalongsor-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "monitoringbencanalongsor",
   storageBucket: "monitoringbencanalongsor.appspot.com",
   messagingSenderId: "853693582014",
   appId: "1:853693582014:web:414e71b0527cc57d732cef"
-
-  
-
 });
 
 // Initialize Firebase

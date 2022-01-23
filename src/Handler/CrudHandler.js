@@ -1,12 +1,17 @@
 import { database } from "./FirebaseHandler";
 const db = database.ref('/')
+const dbh = database.ref('/Longsor1')
+const dbhistory = database.ref('/Longsor1/History')
 class CrudHandler {
     getData(){
         return db
     }
-    createDataLocation(key1, key2, data){
-        const updater = db.child(key1).child(key2).update(data)
-        return updater;
+    getHistory(){
+        return dbhistory
+    }
+    createDataLocation(data){
+
+        return dbh.update(data)
 
     }
 

@@ -6,22 +6,15 @@ import Head from './Component/Head'
 const AddData = () => {
     const [latitude, setLatitude] = useState('')
     const [longitude, setLongitude] = useState('')
-    const [getAlat, setGetAlat] = useState(null)
-    const [setChild, getSetChild] = useState(null)
+
     const [formData, setFormData] = useState({
         latitude: '',
         longitude: ''
     })
-    useEffect(() => {
-        const Data = CrudHandler.getData()
-        Data.on('value', snapshot => {
 
-        })
-       
-    }, [])
     const handleSubmit = (e) =>{
         e.preventDefault()
-        CrudHandler.create(getAlat,setChild,formData)
+        CrudHandler.createDataLocation(formData)
       
         
     }
@@ -34,11 +27,11 @@ const AddData = () => {
              <h1>Data Lokasi Baru</h1>
              <Form.Group>
                  <Form.Label className='text-black font-monospace size-2'>Latitude</Form.Label>
-                 <Form.Control type="text"   />
+                 <Form.Control type="text" onChange={(e)=> setFormData({...formData, latitude: e.target.value})} value={formData.latitude} />
              </Form.Group>
              <Form.Group>
                  <Form.Label className='text-black font-monospace size-2'>Longitude</Form.Label>
-                 <Form.Control type="text"/>
+                 <Form.Control type="text" onChange={(e)=> setFormData({...formData, longitude: e.target.value})} value={formData.longitude}/>
              </Form.Group>
 
              <Button type='submit' value="submit">Submit</Button>
