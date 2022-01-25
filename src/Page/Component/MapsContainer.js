@@ -30,7 +30,7 @@ const MapsContainer = () => {
     return (
         <LoadScript googleMapsApiKey={"AIzaSyC_H1NfVsAI6M3hlBbS696JtdK8Hb9CzHI"}>
             <GoogleMap
-            center={{ lat: -6.8789356, lng: 107.6077721 }}
+            center={{ lat: -6.9875362, lng: 107.6196334 }}
             mapContainerClassName='container-fluid position-absolute h-100 w-100' 
             zoom={13}>
               { Object.keys(data).map((item, index) => 
