@@ -3,6 +3,8 @@ import {Container, Navbar, NavDropdown, Nav, Offcanvas} from 'react-bootstrap'
 import { useAuth } from '../../Handler/LoginHandler'
 import Brand from '../../Img/brandMbl.png'
 import { useHistory } from 'react-router';
+import{AiOutlineHistory} from 'react-icons/ai'
+import {GoLocation} from 'react-icons/go'
 const Head = () => {
   const[error, setError]= useState();
   const{currentUser, logout} = useAuth();
@@ -18,7 +20,7 @@ const Head = () => {
       }
   }
     return (
-<Navbar bg="primary" expand={false}>
+<Navbar bg="success" expand={false}>
   <Container fluid className='d-flex align-items-between'>
     <Navbar.Brand href="/">
             <img
@@ -39,10 +41,10 @@ const Head = () => {
       </Offcanvas.Header>
       <Offcanvas.Body>
       <Nav >
-        <Nav.Link href='/adddata' >Add New Location</Nav.Link>
-        <Nav.Link href='/datatable' >Information</Nav.Link>
+        <Nav.Link href='/adddata' className='text-black'><GoLocation/> Add New Location</Nav.Link>
+        <Nav.Link href='/datatable' className='text-black'><AiOutlineHistory/> History</Nav.Link>
           <NavDropdown.Divider />
-        <Nav.Link  onClick={handleLogout} >Logout</Nav.Link>
+        <Nav.Link  onClick={handleLogout} className='text-black'>Logout</Nav.Link>
       </Nav>
       </Offcanvas.Body>
     </Navbar.Offcanvas>

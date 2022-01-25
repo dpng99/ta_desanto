@@ -26,17 +26,25 @@ const DataTable = () => {
       return rowIndex + 1;
     },
     sort: true
+  },{
+    dataField: 'Tanggal',
+    text: 'Tanggal',
+    sort: true
   }, {
-    dataField: 'Couter',
-    text: 'Getaran',
+    dataField: 'Jam',
+    text: 'Waktu',
+    sort: true
+  },  {
+    dataField: 'toFloat(Couter)',
+    text: 'Counter',
     sort: true
   }, {
     dataField: 'NilaiGetaran',
-    text: 'Kemiringan',
+    text: 'Getaran',
     sort: true
   }, {
     dataField: 'NilaiKemiringan',
-    text: 'Status',
+    text: 'Kemiringan',
     sort: true
   }
 ];
@@ -45,7 +53,7 @@ const DataTable = () => {
         <>
         <Head/>
         <Container>
-            <h1>Data</h1>
+            <h1 className='text-center'>Data History</h1>
         <Card fluid className="border-2 p-5">
         <BootstrapTable bootstrap4 keyField='id.no'data={ table } columns={ columns }  />
         </Card>
