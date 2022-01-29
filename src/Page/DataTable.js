@@ -39,12 +39,12 @@ const DataTable = () => {
     text: 'Counter',
     sort: true
   }, {
-    dataField: 'NilaiGetaran',
-    text: 'Getaran',
+    dataField: 'NilaiGetaran ',
+    text: 'Getaran(SR)',
     sort: true
   }, {
     dataField: 'NilaiKemiringan',
-    text: 'Kemiringan',
+    text: 'Kemiringan(Derajat)',
     sort: true
   }
 ];
